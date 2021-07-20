@@ -4,11 +4,11 @@
 namespace ASTAR
 {
 	static const int MAXDEPTH = 6000;		// 最大深度
-	static const int SIZEX = IMAGESCALE;	// 分辨率
+	static const int SIZEX = IMAGESCALE;		// 分辨率
 	static const int SIZEY = IMAGESCALE;
 	static const int MAX_RAD = 50;			// 最大辐射阈值
 
-	real blendfactor = 0.5;					// 场与距离H函数的混合值 0-忽略辐射场 1-只考虑辐射场
+	real blendfactor = 0.5;				// 场与距离H函数的混合值 0-忽略辐射场 1-只考虑辐射场
 
 	// -----------------------------------------------------------------
 	// nearest path
@@ -26,7 +26,7 @@ namespace ASTAR
 	BYTE hismap[SIZEX][SIZEY] = { 0 };		// 遍历过的点图
 	std::vector< node_t> openlist;			// 开放列表，有待遍历的
 	std::vector< node_t> closelist;			// 关闭列表
-	node_t A;								// 起始跟目标点
+	node_t A;					// 起始跟目标点
 	node_t B;
 	std::vector< PM::point_t> bestway;		// 最优路径
 
